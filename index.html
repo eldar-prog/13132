@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Глина — керамическая мастерская</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Глина</div>
+    <div class="tools">
+      <button class="btn" id="theme" type="button">Тема</button>
+      <button class="btn solid" id="cartBtn" type="button">Корзина: <span id="cnt">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Посуда, которую лепят руками</h1>
+        <p class="lead">Небольшая мастерская: чашки, тарелки и вазы из гончарной глины. Выберите глазурь — и посмотрите, как она ляжет на вазу.</p>
+        <div class="glazes" id="glazes" role="group" aria-label="Выбор глазури">
+          <span class="label">Глазурь: <span id="gname">Кобальт</span></span>
+        </div>
+        <a class="btn solid" href="#shop" style="text-decoration:none;display:inline-block">Смотреть каталог</a>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <svg viewBox="0 0 200 260"><ellipse cx="100" cy="252" rx="70" ry="7" fill="#000" opacity=".12"/><path class="v" d="M80 20H120C120 50 116 62 116 82C158 100 178 140 178 182C178 226 146 250 100 250C54 250 22 226 22 182C22 140 42 100 84 82C84 62 80 50 80 20Z"/><ellipse cx="100" cy="20" rx="20" ry="5" fill="#000" opacity=".25"/><path d="M30 150C70 168 130 168 170 150" stroke="#fff" stroke-opacity=".35" stroke-width="3" fill="none"/><path d="M52 130C44 160 46 200 64 222" stroke="#fff" stroke-opacity=".3" stroke-width="6" stroke-linecap="round" fill="none"/></svg>
+      </div>
+    </div>
+
+    <section class="shop" id="shop">
+      <h2>Каталог</h2>
+      <p class="sub">Каждая вещь сделана вручную, поэтому оттенок и форма слегка отличаются.</p>
+      <div class="filters" id="filters" role="group" aria-label="Фильтр по виду"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="about">
+      <h2>Как мы работаем</h2>
+      <div>
+        <p>Лепим на гончарном круге, сушим несколько дней и обжигаем дважды: сначала без глазури, потом с ней.</p>
+        <p>Посуда подходит для посудомоечной машины и микроволновки. Заказы собираем по субботам.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Мастерская «Глина». Работаем по записи.</footer>
+</div>
+
+<dialog id="cart" aria-labelledby="ct">
+  <h2 id="ct">Корзина</h2>
+  <div id="list"></div>
+  <div class="total"><span>Итого</span><span id="sum">0 ₽</span></div>
+  <div class="acts">
+    <button class="btn" id="clear" type="button">Очистить</button>
+    <button class="btn solid" id="close" type="button">Закрыть</button>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
